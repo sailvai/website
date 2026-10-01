@@ -10,7 +10,7 @@
   --status-green: #1a7f37;
   --radius: 14px;
   --wrap: 1080px;
-  --font: "Geist", "Geist Sans", Inter, -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+  --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, sans-serif;
 }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -89,6 +89,17 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
 .audio-line { margin-top: 14px; font-size: 13px; border-top: 1px solid var(--line); padding-top: 10px; }
 .muted { color: var(--muted); }
 
+/* Art frame — dark in both modes, so the fish art never sits on a light page */
+.art-frame { margin: 44px auto 0; background: #0b0b0d; border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden; max-width: 640px; }
+.art-frame img { display: block; width: 100%; height: auto; }
+
+/* Product card */
+.product-card { display: flex; align-items: center; gap: 24px; border: 1px solid var(--line); border-radius: 12px; padding: 18px; background: var(--bg); text-decoration: none; }
+.product-card:hover { border-color: var(--ink); }
+.product-card .art-frame { flex: 0 0 44%; margin: 0; }
+.product-card h3 { margin: 0 0 8px; font-size: 22px; letter-spacing: -0.02em; }
+.product-card p { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
+
 /* Strip */
 .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); margin-top: 48px; }
 .strip-inner { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; padding: 20px 24px; }
@@ -149,8 +160,22 @@ details a { color: inherit; }
 .footer-links { display: flex; gap: 18px; flex-wrap: wrap; }
 .footer-links a { color: var(--muted); text-decoration: none; font-size: 14px; }
 .footer-links a:hover { color: var(--ink); }
+.footer-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.footer-cols > div { display: flex; flex-direction: column; gap: 8px; }
+.footer-cols h3 { margin: 0; font-size: 13px; font-weight: 400; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+.footer-cols a { color: var(--muted); text-decoration: none; font-size: 14px; }
+.footer-cols a:hover { color: var(--ink); }
+
+/* Prose — privacy page body, used with .narrow */
+.prose { padding: 72px 24px; }
+.prose h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 18px; }
+.prose h2 { font-size: 22px; letter-spacing: -0.02em; margin: 36px 0 8px; }
+.prose p { color: var(--muted); font-size: 17px; margin: 0 0 14px; }
 
 @media (max-width: 800px) {
+  .product-card { flex-direction: column; align-items: stretch; }
+  .product-card .art-frame { flex: none; }
+  .footer-cols { grid-template-columns: 1fr; }
   .nav-links { display: none; }
   .app-body { grid-template-columns: 1fr; }
   .app-side { border-right: 0; border-bottom: 1px solid var(--line); }
