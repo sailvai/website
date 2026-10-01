@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sailvai Anchovy — Meetings stay on your Mac. Notes write themselves.</title>
+  <meta name="description" content="Sailvai Anchovy is a free, open-source Mac app for Apple Silicon. Record mic + computer audio, transcribe and summarize on-device, save Markdown notes for Obsidian. No account. No upload." />
+  <link rel="icon" type="image/png" href="/assets/favicon-64.png" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="wrap nav-inner">
+      <a class="brand" href="/" aria-label="Sailvai home">
+        <img src="/assets/sailvai-mark-64.png" alt="" width="28" height="28" />
+        <span>Sailvai</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#products">Products</a>
+        <a href="/privacy/">Privacy</a>
+      </nav>
+      <div class="nav-cta">
+        <a class="link-quiet" href="https://github.com/sailvai" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-primary btn-sm" href="/anchovy/#download">Download</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero hero-product">
+      <div class="wrap hero-inner">
+        <p class="eyebrow">Sailvai Anchovy</p>
+        <h1>Meetings stay on your Mac.<br />Notes write themselves.</h1>
+        <p class="lede">
+          Anchovy is a free, open-source app for Apple Silicon Macs.
+          Hit Record, and it captures your mic plus the computer audio,
+          transcribes and summarizes on-device, and saves a Markdown note
+          next to the audio. No account. No minutes. No upload.
+        </p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/sailvai" target="_blank" rel="noopener">Download for Mac</a>
+          <a class="btn btn-secondary" href="https://github.com/sailvai" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="micro">Free and open source (MIT) · Apple Silicon Macs · Audio never leaves your Mac</p>
+
+        <div class="art-frame">
+          <img src="/assets/anchovy.jpg" alt="An anchovy swimming through dark water" width="1280" height="720" />
+        </div>
+
+        <!-- Product visual: one recording with a finished note selected, per spec window design -->
+        <div class="app-mock" role="img" aria-label="Anchovy app preview: recording list on the left, the selected recording's note on the right">
+          <div class="app-bar">
+            <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="app-title">Anchovy</span>
+          </div>
+          <div class="app-body">
+            <div class="app-side">
+              <button class="btn btn-primary btn-block" type="button">● Record</button>
+              <ul class="rec-list">
+                <li class="rec active"><strong>2026-09-26 14:10</strong><span>42:00 · Ready</span></li>
+                <li class="rec"><strong>2026-09-25 10:02</strong><span>31:15 · Ready</span></li>
+                <li class="rec"><strong>2026-09-24 16:40</strong><span>12:08 · Saved</span></li>
+                <li class="rec"><strong>2026-09-23 09:30</strong><span>28:44 · Needs models</span></li>
+              </ul>
+              <div class="side-foot"><span>Models</span><span>Settings</span></div>
+            </div>
+            <div class="app-main">
+              <h2>2026-09-26 14:10</h2>
+              <p class="play-line">▶ audio.wav · <span class="muted">note.md sits beside the audio</span></p>
+              <div class="note-grid">
+                <div><h3>Summary</h3><p>Shipped the local-first cut. Default models confirmed. Next: GitHub release.</p></div>
+                <div><h3>Decisions</h3><p>— Ship MIT, GitHub + App Store<br />— No cloud fallback</p></div>
+                <div><h3>Action items</h3><p>— Sign &amp; notarize GitHub build<br />— Invite first users</p></div>
+                <div><h3>Transcript</h3><p class="muted">Kept in the same language as spoken…</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Principles strip -->
+    <section class="strip">
+      <div class="wrap strip-inner">
+        <div><strong>No cloud bill</strong><span>Your Mac does the work</span></div>
+        <div><strong>No meeting bots</strong><span>Never joins the call</span></div>
+        <div><strong>Markdown out</strong><span>Works with Obsidian</span></div>
+        <div><strong>Your models</strong><span>Pick from a list, swap later</span></div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <h2>One window. Two panes.<br />Nothing to babysit.</h2>
+        <p class="section-lede">Left is recordings, newest first. Right is the selected note. Models and Settings replace the right pane — no extra windows.</p>
+        <div class="grid">
+          <div class="card"><h3>Record mic + computer audio</h3><p>Records the selected microphone plus what your Mac is playing. If computer audio is not allowed, records mic only and says so honestly.</p></div>
+          <div class="card"><h3>Meeting nudge, not auto-record</h3><p>When Zoom, Meet, or Teams starts and you are not recording, Anchovy asks once via notification + banner: Record or Not now. No silent recording.</p></div>
+          <div class="card"><h3>Live source + size</h3><p>Always shows the mic name and whether computer audio is recording, with elapsed time and file size updating as you record.</p></div>
+          <div class="card"><h3>On-device notes</h3><p>Summary, Decisions, Action items, and Transcript in one <code>note.md</code>, beside <code>audio.wav</code>. Title stays English; body keeps the spoken language.</p></div>
+          <div class="card"><h3>Your folder, your tools</h3><p>Point at an existing Obsidian vault or a new folder. Any Markdown reader works. No Obsidian plugin in this version.</p></div>
+          <div class="card"><h3>Retry without drama</h3><p>Every recording has a status: Saved, Needs models, Working, Ready, Failed. Failed explains why — out of memory, disk full, download cut — with Retry. Audio is always kept.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- First run -->
+    <section class="section">
+      <div class="wrap">
+        <h2>First open takes three steps.</h2>
+        <div class="steps">
+          <div class="step"><span class="n">1</span><h3>Pick a notes folder</h3><p>Default <code>~/Documents/Anchovy</code>, or choose your Obsidian vault.</p></div>
+          <div class="step"><span class="n">2</span><h3>Allow mic + computer audio</h3><p>Each permission says what it is for. Without computer audio, the other side of online calls is not recorded — and the app says so.</p></div>
+          <div class="step"><span class="n">3</span><h3>Download default models</h3><p>Shows total size and progress. Choose Later and still record; notes wait until models arrive.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Models -->
+    <section class="section" id="models">
+      <div class="wrap">
+        <h2>You pick the model. The app does the rest.</h2>
+        <p class="section-lede">A curated recommendation list ships with the app. Download, load, and unload are handled locally. New small models arrive with app updates.</p>
+        <div class="model-table">
+          <div class="model-row model-head"><span>Role</span><span>Default</span><span>License</span></div>
+          <div class="model-row"><span>Transcription</span><span><strong>Qwen3-ASR 1.7B</strong></span><span>Apache 2.0</span></div>
+          <div class="model-row"><span>Summary</span><span><strong>Qwen3-4B-Instruct-2507</strong>, 4-bit (~2.3 GB)</span><span>Apache 2.0</span></div>
+        </div>
+        <p class="fine">Runs speech first, unloads it, then runs summary — never both in memory. Comfortable on 16 GB; workable on 8 GB. Every future list entry is license-checked before it ships.</p>
+      </div>
+    </section>
+
+    <!-- Privacy: what Anchovy does -->
+    <section class="section" id="privacy">
+      <div class="wrap">
+        <h2>What Anchovy does</h2>
+        <div class="fact-table">
+          <div class="fact-row"><span>Audio and notes</span><span>Stay on your Mac. Nothing is uploaded.</span></div>
+          <div class="fact-row"><span>Account</span><span>None. No sign-up and no transcription minutes.</span></div>
+          <div class="fact-row"><span>Meetings</span><span>Records on your Mac. Never joins the call and never adds a bot.</span></div>
+          <div class="fact-row"><span>Output</span><span>A Markdown note beside the audio file, linked by a relative path.</span></div>
+          <div class="fact-row"><span>Network use</span><span>Only to download the models you pick and to check for app updates.</span></div>
+          <div class="fact-row"><span>Usage statistics</span><span>None.</span></div>
+          <div class="fact-row"><span>License</span><span>MIT. Free from GitHub and the Mac App Store.</span></div>
+        </div>
+        <p class="fine">Same rule in both packages: no account, no upload. This version does not encrypt recordings or notes.</p>
+      </div>
+    </section>
+
+    <!-- Not doing -->
+    <section class="section">
+      <div class="wrap">
+        <h2>What this version does not do</h2>
+        <ul class="notlist">
+          <li>No silent auto-recording of meetings</li>
+          <li>No always-on ambient recording</li>
+          <li>No live captions or mind maps</li>
+          <li>No Obsidian plugin</li>
+          <li>No multi-track recording</li>
+          <li>No speaker names stated as fact</li>
+          <li>No Intel Mac, iPhone, or Windows</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="wrap narrow">
+        <h2>Frequently asked questions</h2>
+        <details open><summary>Which Macs are supported?</summary><p>Apple Silicon Macs. Intel Macs are not in v1. 16 GB is comfortable; 8 GB works because the two models never load at the same time.</p></details>
+        <details><summary>Does it join my meetings?</summary><p>No. It records the mic and computer audio on your Mac. It never joins Zoom, Meet, or Teams and never adds a bot.</p></details>
+        <details><summary>What if it misses a meeting starting?</summary><p>Browser tabs or renamed windows can fool meeting detection. Manual Record always works and records the same way.</p></details>
+        <details><summary>Why is the first download so big?</summary><p>Local models are gigabytes. The app shows total size and progress, verifies files, and lets you defer the download — recording still saves audio.</p></details>
+        <details><summary>Where do my notes live?</summary><p>In the folder you choose, one subfolder per recording: <code>note.md</code> + <code>audio.wav</code> (or <code>audio.m4a</code> on Small quality). Regenerate asks before overwriting edits you made in Obsidian.</p></details>
+        <details><summary>How much does it cost?</summary><p>Free. MIT licensed. No transcription fees and no subscription for this app.</p></details>
+      </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="cta" id="download">
+      <div class="wrap cta-inner">
+        <h2>Get Sailvai Anchovy</h2>
+        <p>Free and open source. Record on your Mac, keep the audio, take the Markdown with you.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="https://github.com/sailvai" target="_blank" rel="noopener">Download for Mac</a>
+          <a class="btn btn-secondary" href="https://github.com/sailvai" target="_blank" rel="noopener">View on GitHub</a>
+        </div>
+        <p class="micro">Mac App Store build follows the same rule: no account, no upload.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Sailvai home">
+            <img src="/assets/sailvai-mark-64.png" alt="" width="20" height="20" />
+            <span>Sailvai</span>
+          </a>
+          <p class="micro">Hardware and software, rebuilt for the AI era.</p>
+        </div>
+        <div class="footer-cols">
+          <div><h3>Products</h3><a href="/anchovy/">Anchovy</a></div>
+          <div><h3>Community</h3><a href="https://github.com/sailvai" target="_blank" rel="noopener">GitHub</a></div>
+          <div><h3>Company</h3><a href="/privacy/">Privacy</a></div>
+        </div>
+      </div>
+      <p class="micro footer-bottom">© 2026 Sailvai</p>
+    </div>
+  </footer>
+</body>
+</html>
