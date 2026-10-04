@@ -64,8 +64,8 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
 /* Hero */
 .hero { padding: 72px 0 8px; text-align: center; }
 .eyebrow { color: var(--muted); font-size: 13px; letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 18px; }
-.hero h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 18px; }
-.lede { max-width: 720px; margin: 0 auto; color: var(--muted); font-size: 18px; }
+.hero h1 { font-size: clamp(38px, 6vw, 64px); line-height: 1.05; letter-spacing: -0.03em; margin: 0 0 18px; text-wrap: balance; }
+.lede { max-width: 720px; margin: 0 auto; color: var(--muted); font-size: 18px; text-wrap: balance; }
 .hero-cta { display: flex; gap: 12px; justify-content: center; margin: 28px 0 12px; flex-wrap: wrap; }
 .micro { color: var(--muted); font-size: 13px; }
 /* Product page hero — smaller art and tighter gaps, so the app mock starts above the fold */
@@ -130,7 +130,9 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
 /* Sections */
 .section { padding: 72px 0; }
 .section + .section, .section + .cta { border-top: 1px solid var(--line); }
-.section h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.025em; line-height: 1.15; margin: 0 0 12px; }
+.section h2 { font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.025em; line-height: 1.15; margin: 0 0 12px; text-wrap: balance; }
+/* Same 28px gap below a heading when no lede sits between it and the content */
+.section h2 + :not(.section-lede) { margin-top: 28px; }
 .section-lede { color: var(--muted); max-width: 720px; margin: 0 0 28px; font-size: 17px; }
 .grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px 32px; }
 .card { border-top: 1px solid var(--line); padding-top: 16px; }
@@ -160,7 +162,7 @@ code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0
 .no { color: var(--muted); }
 
 /* Facts — label and value rows */
-.fact-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.fact-table { border: 1px solid var(--line); border-radius: 12px; overflow: hidden; max-width: 760px; }
 .fact-row { display: grid; grid-template-columns: 200px 1fr; gap: 12px; padding: 13px 18px; font-size: 14px; border-top: 1px solid var(--line); }
 .fact-row:first-child { border-top: 0; }
 .fact-row span:first-child { color: var(--muted); }
@@ -211,4 +213,10 @@ details a { color: inherit; }
   .app-side { border-right: 0; border-bottom: 1px solid var(--line); }
   .grid, .steps, .strip-inner { grid-template-columns: 1fr; }
   .model-row, .compare-row, .fact-row { grid-template-columns: 1fr; gap: 4px; }
+}
+@media (max-width: 600px) {
+  .br-wide { display: none; }
+  .hero-cta { flex-direction: column; }
+  .hero-cta .btn { text-align: center; }
+  .hero-product .lede { text-align: left; }
 }
